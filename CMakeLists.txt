@@ -1,6 +1,31 @@
-cmake_minimum_required(VERSION 3.10)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+cmake_minimum_required(VERSION 3.0)
 
-project(raycaster VERSION 1.0)
-add_executable(raycaster main.cpp)
+project(raycaster)
+
+# Libraries
+find_package(SDL2 REQUIRED)
+Message("")
+Message( STATUS "FINDING SDL2" )
+IF (${SDL2_FOUND})
+    Message( STATUS "SDL2_FOUND: " ${SDL2_FOUND})
+ELSE()
+    Message( STATUS "SDL2_FOUND: " ${SDL2_FOUND})
+    Message( FATAL_ERROR "SDL2 NOT FOUND" )
+ENDIF()
+
+
+# Source files
+set (PROJECT_HEADERS
+    src/headers/game.hpp
+    )
+set (PROJECT_SRC
+    src/game.cpp
+    src/main.cpp
+    )
+
+include_directories(${SDL2_INCLUDE_DIRS} ${PROJECT_HEADERS} ${PROJECT_SRC}})
+
+# Create executable and link libraries
+add_executable(raycaster ${PROJECT_SRC})
+
+target_link_libraries(raycaster ${SDL2_LIBRARIES})
