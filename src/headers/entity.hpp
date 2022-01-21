@@ -1,4 +1,5 @@
 #include <SDL2/SDL_render.h>
+#include "input_handler.hpp"
 
 class Entity
 {

@@ -1,5 +1,6 @@
 #include <SDL2/SDL_pixels.h>
 #include <SDL2/SDL_render.h>
+#include <SDL2/SDL_scancode.h>
 #include <iostream>
 #include "headers/player.hpp"
 
@@ -17,7 +18,8 @@ void Player::render(SDL_Renderer *renderer)
 
 void Player::update()
 {
-    /* std::cout << "Updating in the Player class\n"; */
+    if (InputHandler::get_handler().is_key_pressed(SDL_SCANCODE_LEFT))
+        std::cout << "Pressing left!\n";
 }
 
 Player::~Player()

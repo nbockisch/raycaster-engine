@@ -71,20 +71,24 @@ void Game::render()
     SDL_SetRenderDrawColor(this->renderer, 255, 255, 255, 255);
     SDL_RenderClear(this->renderer);
     
+    this->map.render(this->renderer);
+
     for (Entity *entity : this->entities) {
 	    entity->render(this->renderer);
     }
-    /* this->map.render(this->renderer); */
     
     SDL_RenderPresent(this->renderer);
 }
 
 void Game::update()
 {
+    InputHandler::get_handler().update();
+
+    this->map.update();
+
     for (Entity *entity : this->entities) {
 	    entity->update();
     }
-    /* this->map.update(); */
 }
 
 void Game::events()
