@@ -10,8 +10,8 @@
 class Game
 {
     private:
-        SDL_Window *window = NULL;
-        SDL_Renderer *renderer = NULL;
+        SDL_Window *window;
+        SDL_Renderer *renderer;
         const char *window_title;
         int window_width;
         int window_height;
@@ -22,7 +22,6 @@ class Game
 
         void render();
         void update();
-        void events();
 
     public:
         Game(const char *window_title, int window_width, int window_height, int fps);

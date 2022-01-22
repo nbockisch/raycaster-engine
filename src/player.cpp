@@ -8,6 +8,7 @@ Player::Player(int x, int y)
 {
     this->set_x(x);
     this->set_y(y);
+    this->angle = 0;
 }
 
 void Player::render(SDL_Renderer *renderer)
@@ -20,6 +21,8 @@ void Player::update()
 {
     if (InputHandler::get_handler().is_key_pressed(SDL_SCANCODE_LEFT))
         std::cout << "Pressing left!\n";
+    else
+        std::cout << "Not pressing left!\n";
 }
 
 Player::~Player()

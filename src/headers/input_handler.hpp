@@ -5,7 +5,8 @@ class InputHandler
 {
     private:
         static InputHandler input_handler;
-        const Uint8 *key_states;
+        Uint8 *key_states;
+        bool received_quit;
 
         InputHandler();
         ~InputHandler();
@@ -15,4 +16,5 @@ class InputHandler
         static InputHandler &get_handler();
         void update();
         bool is_key_pressed(SDL_Scancode key);
+        bool should_quit();
 };

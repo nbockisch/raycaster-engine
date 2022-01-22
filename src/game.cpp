@@ -52,7 +52,6 @@ int Game::run()
         frame_start = SDL_GetTicks();
 
         // Updating and rendering goes here
-        this->events();
         this->update();
         this->render();
 
@@ -83,26 +82,17 @@ void Game::render()
 void Game::update()
 {
     InputHandler::get_handler().update();
+    
+    if (InputHandler::get_handler().should_quit()) {
+        this->running = false;
+        return;
+    }
 
     this->map.update();
 
     for (Entity *entity : this->entities) {
 	    entity->update();
     }
-}
-
-void Game::events()
-{
-    SDL_Event event;
-    SDL_PollEvent(&event);
-
-	switch (event.type) {
-	    case SDL_QUIT:
-	        this->running = false;
-		break;
-	    default:
-		break;
-	}
 }
 
 Game::~Game()
