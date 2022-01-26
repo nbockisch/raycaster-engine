@@ -1,3 +1,10 @@
+/**
+ * @author Nathan Bockisch
+ *
+ * Source file for the Player class, containing all the class function and 
+ * variable definitions
+ **/
+
 #include <SDL2/SDL_pixels.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_scancode.h>
@@ -8,7 +15,6 @@ Player::Player(int x, int y)
 {
     this->set_x(x);
     this->set_y(y);
-    this->angle = 0;
 }
 
 void Player::render(SDL_Renderer *renderer)

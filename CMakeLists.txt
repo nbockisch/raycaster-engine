@@ -17,6 +17,7 @@ ENDIF()
 # Source files
 set (PROJECT_HEADERS
     src/headers/input_handler.hpp
+    src/headers/camera.hpp
     src/headers/player.hpp
     src/headers/entity.hpp
     src/headers/map.hpp
@@ -24,6 +25,7 @@ set (PROJECT_HEADERS
     )
 set (PROJECT_SRC
     src/input_handler.cpp
+    src/camera.cpp
     src/player.cpp
     src/entity.cpp
     src/map.cpp

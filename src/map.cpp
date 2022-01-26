@@ -1,3 +1,10 @@
+/**
+ * @author Nathan Bockisch
+ *
+ * Header file for the Map class, containing all the class and variable
+ * defintions for loading and updating the map
+ **/
+
 #include <SDL2/SDL_rect.h>
 #include <SDL2/SDL_render.h>
 #include "headers/map.hpp"
@@ -43,4 +50,9 @@ void Map::update()
 
 Map::~Map()
 {
+}
+
+std::vector<std::vector<int>> &Map::get_map()
+{
+    return this->map;
 }

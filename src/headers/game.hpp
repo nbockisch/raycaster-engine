@@ -1,3 +1,11 @@
+/**
+ * @author Nathan Bockisch
+ *
+ * Header file for the Game class, containing all the class and variable
+ * declarations for starting the SDL components and rendering/updating the map
+ * and entities
+ **/
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_error.h>
 #include <SDL2/SDL_render.h>

@@ -1,3 +1,10 @@
+/**
+ * @author Nathan Bockisch
+ *
+ * Header file for the InputHandler class, containing all the class function and
+ * variable definitions for handling user input
+ **/
+
 #include <SDL2/SDL_keyboard.h>
 #include <SDL2/SDL_scancode.h>
 #include <SDL2/SDL_events.h>
@@ -39,6 +46,7 @@ bool InputHandler::is_key_pressed(SDL_Scancode key)
     return false;
 }
 
+/* Check if the user sent an SDL_QUIT event */
 bool InputHandler::should_quit()
 {
     return received_quit;

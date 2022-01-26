@@ -1,3 +1,11 @@
+/**
+ * @author Nathan Bockisch
+ *
+ * Source file for the Game class, containing all the class and variable
+ * definitions for starting the SDL components and rendering/updating the map
+ * and entities
+ **/
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_error.h>
 #include <SDL2/SDL_events.h>
@@ -9,14 +17,16 @@
 
 #include "headers/game.hpp"
 
-Game::Game(const char *window_title, int window_width, int window_height, int fps)
+Game::Game(const char *window_title, int window_width, int window_height, 
+        int fps)
 {
     this->window_title = window_title;
     this->window_width = window_width;
     this->window_height = window_height;
     this->fps = fps;
     this->map = Map();
-    /* this->entities = std::vector<Entity *>(); */
+
+    /* Add all entities to the vector to be updated/rendered */
     Player player = Player(200, 200);
     this->entities.push_back(new Player(200, 200));
 }

@@ -1,3 +1,10 @@
+/**
+ * @author Nathan Bockisch
+ *
+ * Header file for the InputHandler class, containing all the class function and
+ * variable declarations for handling user input
+ **/
+
 #include <SDL2/SDL_scancode.h>
 #include <SDL2/SDL_stdinc.h>
 

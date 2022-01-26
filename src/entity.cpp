@@ -1,3 +1,10 @@
+/**
+ * @author Nathan Bockisch
+ *
+ * Source file for the Entity class, containing all the class definitions
+ * inherited by all entities, including the Player class
+ **/
+
 #include <SDL2/SDL_render.h>
 #include <iostream>
 #include "headers/entity.hpp"
@@ -22,12 +29,12 @@ int Entity::get_y()
     return this->y;
 }
 
+/* Abstract functions for rendering and updating, implemented in child classes 
+ */
 void Entity::render(SDL_Renderer *renderer)
 {
-    std::cout << "Rendering in Entity class\n";
 }
 
 void Entity::update()
 {
-    std::cout << "Updating in Entity class\n";
 }
