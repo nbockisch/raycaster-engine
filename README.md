@@ -20,6 +20,6 @@ make
 - [x] Create an object-oriented class structure
 - [x] Create class for handling game rendering and updating
 - [x] Create class for input handling
-- [] Create class for casting rays and rending player view
-- [] Implement collision-detection
-- [] Implement saving and loading maps from files
+- [ ] Create class for casting rays and rending player view
+- [ ] Implement collision-detection
+- [ ] Implement saving and loading maps from files
