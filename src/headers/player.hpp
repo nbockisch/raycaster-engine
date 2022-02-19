@@ -11,13 +11,15 @@
 class Player : public Entity
 {
     private:
-        double x_dir;
-        double y_dir;
+        double angle;
     public:
-        Player(int x, int y);
+        Player(double x, double y);
         virtual void render(SDL_Renderer *renderer) override;
         virtual void update() override;
-        void set_angle(int angle);
-        int get_angle();
+        void move_forward(double amount);
+        void move_back(double amount);
+        void set_angle(double angle);
+        void change_angle(double change);
+        double get_angle();
         ~Player();
 };

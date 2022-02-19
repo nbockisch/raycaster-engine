@@ -11,14 +11,14 @@
 class Entity
 {
     protected:
-        int x;
-        int y;
+        double x;
+        double y;
 
     public:
-        void set_x(int x);
-        void set_y(int y);
-        int get_x();
-        int get_y();
+        void set_x(double x);
+        void set_y(double y);
+        double get_x();
+        double get_y();
         virtual void render(SDL_Renderer *renderer);
         virtual void update();
 };

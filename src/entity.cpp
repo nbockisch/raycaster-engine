@@ -9,22 +9,22 @@
 #include <iostream>
 #include "headers/entity.hpp"
 
-void Entity::set_x(int x)
+void Entity::set_x(double x)
 {
     this->x = x;
 }
 
-void Entity::set_y(int y)
+void Entity::set_y(double y)
 {
     this->y = y;
 }
 
-int Entity::get_x()
+double Entity::get_x()
 {
     return this->x;
 }
 
-int Entity::get_y()
+double Entity::get_y()
 {
     return this->y;
 }
