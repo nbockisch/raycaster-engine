@@ -2,11 +2,11 @@
 
 #include "headers/game.hpp"
 
-const int WIDTH = 640;
-const int HEIGHT = 480;
+const int WIDTH = 640 * 2;
+const int HEIGHT = 480 * 2;
 
 int main() {
-    Game game = Game("Raycasting Engine", 640, 480, 60);
+    Game game = Game("Raycasting Engine", WIDTH, HEIGHT, 60);
 
     if (game.run() != 0) {
         return 1;

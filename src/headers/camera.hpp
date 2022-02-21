@@ -15,8 +15,9 @@ class Camera
     private:
         Player *player;
         Map *map;
+        double fov;
     public:
-        Camera(Player *player, Map *map);
+        Camera(Player *player, Map *map, double fov);
         void update();
         void render(SDL_Renderer *renderer);
         ~Camera();

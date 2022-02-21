@@ -8,10 +8,11 @@
 
 #include "headers/camera.hpp"
 
-Camera::Camera(Player *player, Map *map)
+Camera::Camera(Player *player, Map *map, double fov)
 {
     this->player = player;
     this->map = map;
+    this->fov = fov;
 }
 
 void Camera::update()
